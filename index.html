@@ -8,16 +8,10 @@
   </head>
   <body>
     <div id="app">{{ message }}</div>
-    <script>
-      const { createApp, ref } = Vue;
-      createApp({
-        setup() {
-          const message = ref("Hello vue!");
-          return {
-            message,
-          };
-        },
-      }).mount("#app");
+    <script type="module">
+      import { createApp } from 'vue'
+      import MyComponent from './test.js'
+      createApp(MyComponent).mount('#app')
     </script>
   </body>
 </html>
